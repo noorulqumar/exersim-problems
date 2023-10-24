@@ -140,8 +140,6 @@ fi
                         j=$(( j - 1 ))
                     fi
                 done
-            # else
-            #     echo 'false'
             fi
         done
         if (( check == 1 ))
