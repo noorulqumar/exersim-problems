@@ -3,7 +3,6 @@ main()
 {
     b="$1"
     a="$2"
-    echo $b $a
     sum_of_numbers=0
     sum_of_squre=0
     for (( i=1;i<=a; i++))
