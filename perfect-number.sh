@@ -8,18 +8,17 @@ main ()
         echo "Classification is only possible for natural numbers."
         exit 2
     fi
-    if (( a%2 != 0  ))
-    then
-    for (( i=1; i<=a/2; i+=2 ))
+    # sqrt=$(echo "sqrt($a)" | bc)
+    for (( i=1; i<=a/2; i++ ))
     do
         if (( a%i == 0 ))
         then
+            echo $i
             sum=$(( sum + i ))
         fi
     done
 
-    fi
-    #echo $sum
+    echo $sum
     if (( sum == a ))
     then
         echo "perfect"
