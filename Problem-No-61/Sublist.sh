@@ -88,9 +88,6 @@ main()
             (( check == 0 )) && echo "unequal" || echo "sublist"
         fi
     fi
-
-
-
 }
 
 main "$@"
