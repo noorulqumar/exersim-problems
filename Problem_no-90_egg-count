@@ -1,9 +1,0 @@
-#!/bin/bash
-Count_egg()
-{
-    a=$1
-    echo $a
-    
-}
-
-Count_egg "$@"
