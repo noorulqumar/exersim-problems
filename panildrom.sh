@@ -9,6 +9,12 @@ main()
     maximum_Panildrom_No_j=0
     minimum_Panildrom_No_i=0
     minimum_Panildrom_No_j=0
+    (( $# == 3 )) || exit 1
+    if [[ $a != "smallest" ]] && [[ $1 != "largest" ]] 
+    then
+        echo "first arg should be 'smallest' or 'largest'"
+        exit 1
+    fi
     for (( i=a; i<=b; i++ ))
     do
         for (( j=a; j<=b; j++ ))
