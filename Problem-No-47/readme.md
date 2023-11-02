@@ -1,22 +1,25 @@
 Instructions
-The ISBN-10 verification process is used to validate book identification numbers. These normally contain dashes and look like: 3-598-21508-8
+Convert a number, represented as a sequence of digits in one base, to any other base.
 
-ISBN
-The ISBN-10 format is 9 digits (0 to 9) plus one check character (either a digit or an X only). In the case the check character is an X, this represents the value '10'. These may be communicated with or without hyphens, and can be checked for their validity by the following formula:
+Implement general base conversion. Given a number in base a, represented as a sequence of digits, convert it to base b.
 
-(d₁ * 10 + d₂ * 9 + d₃ * 8 + d₄ * 7 + d₅ * 6 + d₆ * 5 + d₇ * 4 + d₈ * 3 + d₉ * 2 + d₁₀ * 1) mod 11 == 0
-If the result is 0, then it is a valid ISBN-10, otherwise it is invalid.
+Note
+Try to implement the conversion yourself. Do not use something else to perform the conversion for you.
+About Positional Notation
+In positional notation, a number in base b can be understood as a linear combination of powers of b.
 
-Example
-Let's take the ISBN-10 3-598-21508-8. We plug it in to the formula, and get:
-(3 * 10 + 5 * 9 + 9 * 8 + 8 * 7 + 2 * 6 + 1 * 5 + 5 * 4 + 0 * 3 + 8 * 2 + 8 * 1) mod 11 == 0
+The number 42, in base 10, means:
 
-Since the result is 0, this proves that our ISBN is valid.
+(4 * 10^1) + (2 * 10^0)
 
-Task
-Given a string the program should check if the provided string is a valid ISBN-10. Putting this into place requires some thinking about preprocessing/parsing of the string prior to calculating the check digit for the ISBN.
+The number 101010, in base 2, means:
 
-The program should be able to verify ISBN-10 both with and without separating dashes.
+(1 * 2^5) + (0 * 2^4) + (1 * 2^3) + (0 * 2^2) + (1 * 2^1) + (0 * 2^0)
 
-Caveats
-Converting from strings to numbers can be tricky in certain languages. Now, it's even trickier since the check digit of an ISBN-10 may be 'X' (representing '10'). For instance 3-598-21507-X is a valid ISBN-10.
+The number 1120, in base 3, means:
+
+(1 * 3^3) + (1 * 3^2) + (2 * 3^1) + (0 * 3^0)
+
+I think you got the idea!
+
+Yes. Those three numbers above are exactly the same. Congratulations!

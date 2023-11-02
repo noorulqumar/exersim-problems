@@ -8,27 +8,25 @@ main ()
         echo "Classification is only possible for natural numbers."
         exit 2
     fi
-    # sqrt=$(echo "sqrt($a)" | bc)
     for (( i=1; i<=a/2; i++ ))
     do
         if (( a%i == 0 ))
         then
-            echo $i
             sum=$(( sum + i ))
         fi
     done
-
-    echo $sum
     if (( sum == a ))
     then
         echo "perfect"
+        exit 0
     elif (( sum > a ))
     then
         echo "abundant"
+        exit 0
     elif (( sum < a ))
     then
         echo "deficient"
+        exit 0
     fi
 }
-
 main "$@"
